@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Car Care</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --ink:#e6eef7;
+      --muted:#9fb0c3;
+      --line:#1a2230;
+      --card:#0f1621;
+      --brand:#38bdf8;
+      --brand-2:#22c55e;
+      --radius:18px;
+      --shadow:0 18px 40px rgba(0,0,0,.45);
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      background:radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,.08), transparent 60%),
+      radial-gradient(900px 500px at 110% -20%, rgba(34,197,94,.07), transparent 60%),
+      var(--bg);
+
+      color:var(--ink);
+      font-family:"Plus Jakarta Sans",sans-serif;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:min(1100px,92%);
+      margin:auto;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(10px);
+      background:rgba(11,15,20,.7);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:1rem 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:.7rem;
+      font-weight:800;
+      font-size:1.1rem;
+    }
+
+    .mark{
+      width:34px;
+      height:34px;
+      border-radius:10px;
+      background:conic-gradient(from 210deg at 50% 50%, var(--brand), var(--brand-2), var(--brand));
+      box-shadow:0 10px 22px rgba(56,189,248,.25);
+    }
+
+    .btn{
+      padding:.8rem 1rem;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--brand),#67d2ff);
+      color:#032232;
+      font-weight:800;
+    }
+
+    .hero{
+      padding:5rem 0 3rem;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:2rem;
+      align-items:center;
+    }
+
+    @media(max-width:900px){
+      .hero-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    .eyebrow{
+      display:inline-block;
+      padding:.45rem .8rem;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--muted);
+      background:#0d1420;
+      font-weight:700;
+      margin-bottom:1rem;
+    }
+
+    h1{
+      font-size:clamp(2.2rem,5vw,4rem);
+      line-height:1.05;
+      margin:0 0 1rem;
+    }
+
+    .lead{
+      color:var(--muted);
+      font-size:1.05rem;
+      line-height:1.8;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:1.2rem;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-image{
+      width:100%;
+      border-radius:16px;
+      border:1px solid var(--line);
+    }
+
+    section{
+      padding:3rem 0;
+    }
+
+    .section-title{
+      font-size:2rem;
+      margin-bottom:1rem;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1rem;
+    }
+
+    @media(max-width:850px){
+      .grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    .feature{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:1.3rem;
+      box-shadow:var(--shadow);
+    }
+
+    .feature h3{
+      margin-top:0;
+      font-size:1.1rem;
+    }
+
+    .feature p{
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1rem;
+      margin-top:2rem;
+    }
+
+    @media(max-width:700px){
+      .stats{
+        grid-template-columns:1fr;
+      }
+    }
+
+    .stat{
+      text-align:center;
+      padding:2rem 1rem;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+    }
+
+    .stat h2{
+      margin:0;
+      font-size:2.5rem;
+      color:var(--brand);
+    }
+
+    .stat p{
+      color:var(--muted);
+      margin-top:.5rem;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:2rem 0;
+      color:var(--muted);
+      text-align:center;
+      margin-top:2rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <span class="mark"></span>
+        <span>Car Care</span>
+      </a>
+
+      <a href="index.html" class="btn">← Back Home</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div>
+          <span class="eyebrow">🚘 About Our Car Wash</span>
+
+          <h1>Premium Car Care With Honest Pricing.</h1>
+
+          <p class="lead">
+            Car Care is a trusted car washing and detailing center located in Sector 23, Sonipat.
+            We focus on quality cleaning, customer satisfaction and fast service.
+          </p>
+
+          <p class="lead">
+            From quick foam washes to complete interior deep cleaning and underbody coating —
+            every car is treated with care and attention to detail.
+          </p>
+
+          <div style="margin-top:2rem;">
+            <a href="index.html" class="btn">Book a Service</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            class="hero-image"
+            src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=1400&auto=format&fit=crop"
+            alt="Car wash image"
+          />
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <h2 class="section-title">Why Customers Choose Us</h2>
+
+        <div class="grid">
+
+          <div class="feature">
+            <h3>⚡ Fast Service</h3>
+            <p>
+              Quick turnaround times without compromising cleaning quality.
+              Perfect for busy daily schedules.
+            </p>
+          </div>
+
+          <div class="feature">
+            <h3>✨ Premium Finish</h3>
+            <p>
+              We use quality products and detailing techniques to give your car
+              a fresh showroom-like shine.
+            </p>
+          </div>
+
+          <div class="feature">
+            <h3>💯 Honest Pricing</h3>
+            <p>
+              Transparent pricing with no hidden charges.
+              Clean work at affordable rates.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <h2 class="section-title">Our Mission</h2>
+
+        <div class="card">
+          <p class="lead">
+            Our mission is simple — provide reliable, affordable and high-quality car care services
+            that customers can trust. We believe every vehicle deserves proper care,
+            hygiene and protection.
+          </p>
+
+          <p class="lead">
+            Whether it’s a quick wash or a complete deep clean,
+            we make sure every customer leaves satisfied.
+          </p>
+        </div>
+
+        <div class="stats">
+
+          <div class="stat">
+            <h2>500+</h2>
+            <p>Cars Cleaned</p>
+          </div>
+
+          <div class="stat">
+            <h2>4.9★</h2>
+            <p>Customer Satisfaction</p>
+          </div>
+
+          <div class="stat">
+            <h2>7 Days</h2>
+            <p>Open Every Week</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Car Care — Sector 23, Sonipat
+  </footer>
+
+</body>
+</html>
