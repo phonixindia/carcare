@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://phonixindia.github.io/carcare/sitemap.xml
